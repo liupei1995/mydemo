@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--js的引入顺序不要更改-->
+		<script src="js/md5.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/crypto-js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mode-ecb.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/packgeMac.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			
+			//组装HEAD
+			var transCode="1005000301";
+			var version='v1.1';
+			var trxDate="20170614155050";
+			var token="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBfaWQiOiJxaXl1bnhpbiIsImV4cCI6MTQ5NzY2NDIwMiwiaWF0IjoxNDk3NDA1MDAyLCJyX2lkIjoiMjExMjYiLCJzdWIiOiI4OGI0MWNhYzc3ZjU0YzIxOTYzYjRjYWFhYjY4OWZlNiJ9.UKAYyQWCXibrYhXQhQcUXYj6on6i5Ia05JnVI0LRNUZdDVcits2W4gIfQAX_xHPhLGERWceC-QROpjovKoKKYkfvBiP3l-H0Kqa4j4Ds0Ao6t6Qxsyw_XoTDPMgkr_buSjImhr-e8mrHBxSXIXjjFtbtgYgvUREAEMHn_Rc5834";
+			var openId= "88b41cac77f54c21963b4c11aaab689fe6";
+			var custId="211216";
+			var head={
+				openId:openId,
+				custId:custId,
+				transCode:transCode,
+				version:version,
+				trxDate:trxDate,
+				token:token,
+				requestKey:'IOS_10.3.2'
+			};
+			
+			//组装BODY
+			var body={
+			 	accountNo:'201707281003005051',
+			 	balanceId:'1'
+			};
+			
+			//加密后的数据
+			var mydata=packgeMac(head,body);
+		</script>
+	</body>
+</html>
