@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [DEFAULT]
 BASEURL=http://bbs.mumayi.net/index.php
 [InternetShortcut]
@@ -12,3 +13,19 @@ HotKey=0
 IconFile=E:+AFyPb072fxaPkQBc-favicon.ico
 [{000214A0-0000-0000-C000-000000000046}]
 Prop3=19,2
+=======
+[DEFAULT]
+BASEURL=http://bbs.mumayi.net/index.php
+[InternetShortcut]
+URL=http://www.dowebok.com/191.html
+Modified=A0089165632FC701F8
+IconFile=C:\Windows\system32\SHELL32.dll
+IconIndex=130
+IDList=
+HotKey=0
+[InternetShortcut.A]
+[InternetShortcut.W]
+IconFile=E:+AFyPb072fxaPkQBc-favicon.ico
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
+>>>>>>> 3c057d6d49fe2f83b1fb5fcd8fca19c824b0d101
