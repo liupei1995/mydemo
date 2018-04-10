@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			
+			//javaScript原有的for...in循环,只能获得对象的键名,不能直接获取键值.
+			//ES6提供的for...of循环,允许遍历获得键值
+			
+			var arr = ["a", "b", "c", "d"];
+			
+			for (let a in arr) {
+				console.log(a); //0 1 2 3
+			}
+			
+			for (let a of arr) {
+				console.log(a); //a b c d
+			}
+			
+			//使用for..of循环Set和Map结构
+			var engines = new Set(["Gecko", "Trident", "Webkit", "Webkit"]);
+			for (let e of engines) {
+				console.log(e); //Gecko Trident Webkit
+			}
+			
+			var est = new Map();
+			est.set("edition", 6);
+			est.set("committee", "TC39");
+			est.set("standard", "ECMA-262");
+			for (let [name, value] of est) {
+				console.log(name + ":" + value);
+			}
+		</script>
+	</body>
+</html>

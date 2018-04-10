@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			//Array.from()用于将两类对象转为真正的数组:类似数组的对象和可遍历的对象
+			let ps = document.querySelectorAll('p'); //返回的NodeList集合
+			Array.from(ps).forEach(function(p){
+				console.log(p);
+			});
+			
+			
+			//ES6提供了三个新的方法--entries(),keys()和values()--用于遍历数组
+			//keys()是对键名的遍历、values()是对键值的遍历、entries()是对键值对的遍历
+			for(let index of ["a","b"].keys()){
+				console.log(index)
+			}
+			for (let elem of ["a","b"].values()) {
+				console.log(elem);
+			}
+			for (let [index, elem] of ["a","b"].entries()) {
+				console.log(index, elem);
+			}
+		</script>
+		
+	</body>
+</html>

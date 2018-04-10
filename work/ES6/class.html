@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			
+			//引入了Class（类）这个概念
+			//用class定义了一个类Animal
+			//constructor内定义的方法和属性是实例对象自己的
+			//constructor外定义的方法和属性是所有实力对象可以共享的
+			class Animal {
+				constructor(){
+					this.type = "animal";
+				}
+				says(say){
+					console.log(this.type + ' say ' + say);
+				}
+			}
+			
+			let animal = new Animal();
+			animal.says("hello");  //animal says hello
+			
+			
+			//Class之间通过extends关键字实现继承,通过extends关键字,继承了Animal类的所有属性和方法
+			//super关键字,它指代父类的实例(即父类的this对象)
+			//子类必须在constructor方法中调用super方法,否则新建实例会报错.
+			//这是因为子类没有自己的this对象,而是继承父类的this对象
+			class Cat extends Animal {
+				constructor(){
+					super();
+					this.type = "cat";
+				}
+			}
+			
+			let cat = new Cat();
+			cat.says("hello"); //cat says hello
+			
+		</script>
+	</body>
+</html>

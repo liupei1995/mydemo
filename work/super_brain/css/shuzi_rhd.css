@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+.box{
+	display: flex;
+	flex-flow: wrap;
+	width: 300px;
+	height: 300px;
+	border: 3px solid lightskyblue;
+}
+.box>.item{
+	text-align: center;
+	flex: 0 0 25%;
+	line-height: 75px;
+	width: 75px;
+	background: url(../img/bg.jpg) center center no-repeat;
+	background-size: cover;
+	font-size: 18px;
+}
+#DivLast{
+	background: none;
+}
+button{
+	width: 40%;
+	line-height: 40px;
+	font-size: 16px;
+	margin: 30px;
+	outline: none;
+	border: none;
+	border: 1px solid dodgerblue;
+	background-color: dodgerblue;
+	color: #ffffff;
+	border-radius: 20px;
+}
+#time{
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.title{
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+.congratulation{
+	font-size: 16px;
+	color: dodgerblue;
+	margin-bottom: 20px;
+}
+.layui-m-layercont{
+	padding: 30px !important;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="clickBox">1</div>
+		<div class="clickBox">2</div>
+		<div class="clickBox">3</div>
+		<div class="clickBox">4</div>
+		<div class="clickBox">5</div>
+		
+		<script type="text/javascript">
+			
+			//ES5只有全局作用域和函数作用域，没有块级作用域
+			
+			var name='liupei'
+			
+			while (true) {
+				var name="obama"
+				console.log(name) //obama
+				break
+			}
+			
+			console.log(name) //obama
+			
+			let name1="liupei"
+			while(true){
+				let name1='obama'
+				console.log(name1) //obama
+				break
+			}
+			console.log(name1) //liupei
+			
+			
+			var a=[];
+			for (var i=0;i<10;i++) {
+				a[i]=function () {
+					console.log(i)
+				}
+			}
+			a[6](); //10
+			
+			var b=[];
+			for (let i=0;i<10;i++) {
+				b[i]=function () {
+					console.log(i)
+				}
+			}
+			b[6](); //6
+			
+			
+			//无论点击那个都是输出5
+			var clickBoxs=document.querySelectorAll('.clickBox');
+			for (var i=0;i<clickBoxs.length;i++) {
+				clickBoxs[i].onclick=function () {
+					console.log(i);
+				}
+			}
+			
+			//使用let变量,点击输入0,1,2,3,4
+			var clickBoxs=document.querySelectorAll('.clickBox');
+			for (let i=0;i<clickBoxs.length;i++) {
+				clickBoxs[i].onclick=function () {
+					console.log(i);
+				}
+			}
+			
+			//使用闭包
+			function iteratorFactory(i){
+				var onclick= function () {
+					console.log(i);
+				}
+				return onclick;
+			}
+			var clickBoxs=document.querySelectorAll('.clickBox');
+			for (let i=0;i<clickBoxs.length;i++) {
+				clickBoxs[i].onclick=iteratorFactory(i);
+			}
+			
+			
+			//const声明常量,一旦声明,常量的值就不能改变
+			const PI = Math.PI;
+			PI = 23; //报错
+		</script>
+		
+	</body>
+</html>

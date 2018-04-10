@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//字符串的扩展
+			
+			//字符串的遍历
+			for (let codePoint of "foo") {
+				console.log(codePoint) //"f" "o" "o"
+			}
+			
+			//是否包含字符串,传统javascript只有indexOf方法
+			//ES6又提供了三种新方法
+			//includes():返回布尔值,表示是否找到了参数字符串
+			//startsWith():返回布尔值,表示参数字符串是否在原字符串的头部
+			//endsWith():返回布尔值,表示参数字符串是否在原字符的尾部
+			var s = "Hello world";
+			
+			console.log(s.startsWith("Hello")); //true
+			console.log(s.endsWith("ld"));      //true
+			console.log(s.includes("o"));       //true
+			
+			//都支持第二个参数
+			//endsWith针对前n个字符,其他两个方法针对从n个位置知道字符结束
+			console.log(s.startsWith("world",6)); //true
+			console.log(s.endsWith("lo",5));      //true
+			console.log(s.includes("e",6));  	  //false
+			
+		</script>
+	</body>
+</html>
