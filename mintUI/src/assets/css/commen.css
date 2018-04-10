@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
 	margin:0px;
 }
@@ -7,4 +8,15 @@ body{
 }
 .mint-header-button>a{
 	color: #e43844 !important;
+=======
+body{
+	margin:0px;
+}
+.mint-header{
+	background-color:#f5f5f5 !important; 
+	color: #1a1a1a !important;
+}
+.mint-header-button>a{
+	color: #e43844 !important;
+>>>>>>> 0a6b562159fce228464cea5af1786cc57a593066
 }
